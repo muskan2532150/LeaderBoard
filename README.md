@@ -42,7 +42,7 @@ https://github.com/muskan2532150/LeaderBoard.git
 
 - GitHub: @muskan2532150
 - Twitter: @muskan2532150
-- Linkedin:https://www.linkedin.com/in/muskan-gupta-869165225/
+- Linkedin:[USername](https://www.linkedin.com/in/muskan-gupta-869165225/)
 
 ## 🤝 Contributing
 
