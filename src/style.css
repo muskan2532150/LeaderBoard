@@ -1,0 +1,95 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body{
+    padding: 12px;
+    margin: 3% 15%;
+}
+
+button {
+    background-color: transparent;
+    box-shadow: 11px 11px 11px;
+}
+
+.main{
+    display: flex;
+    justify-content: space-between;
+    margin: 3% 3%;
+    padding: 3%;
+    gap: 21%;
+}
+
+h1 {
+    padding-top: 8%;
+    font-size: 50px;
+    padding-left: 8%;
+}
+
+.part-one,.part-two{
+    width: 50%;
+}
+
+.head {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 26px;
+}
+
+.head h3,
+.part-two h3 {
+    font-size: 30px;
+}
+
+.head button {
+    padding: 1%;
+}
+
+.part-one-ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    font-size: 25px;
+    font-weight: 600;
+    border: 5px solid #000;
+    margin-left: 11%;
+}
+
+.part-one-ul li{
+    padding: 12px;
+}
+
+.part-one-ul li:nth-child(odd) {
+    background-color: #d3d3d3;
+}
+
+.part-two h3 {
+    padding-bottom: 5%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+input,
+button {
+    font-size: 25px;
+    border: 7px solid black;
+    padding: 12px;
+}
+
+input::placeholder {
+    font-size: 20px;
+    color: #000;  
+    font-weight: 600; 
+}
+
+.part-two button {
+    align-self: end;
+}
