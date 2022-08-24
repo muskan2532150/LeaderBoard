@@ -1,2 +1,2 @@
-const box= document.querySelector('.box');
-export default box ;
+const box = document.querySelector('.box');
+export default box;

@@ -1,9 +1,10 @@
+/* eslint no-dupe-keys: "error" */
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 
 module.exports = {
-    mode: 'development',
+  mode: 'development',
   entry: './src/index.js',
   output: {
     filename: '[name].bundle.js',
@@ -13,7 +14,9 @@ module.exports = {
   devServer: {
     static: './dist',
   },
-  plugins: [new MiniCssExtractPlugin()],
+  plugins: [new MiniCssExtractPlugin(), new HtmlWebpackPlugin({
+    template: './src/index.html',
+  })],
   module: {
     rules: [
       {
@@ -22,10 +25,10 @@ module.exports = {
       },
     ],
   },
-  plugins: [new HtmlWebpackPlugin({
-    template: './src/index.html',
-  })
-],
+  // plugins: [new HtmlWebpackPlugin({
+  //   template: './src/index.html',
+  // }),
+  // ],
   optimization: {
     runtimeChunk: 'single',
   },
