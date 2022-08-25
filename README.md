@@ -37,6 +37,14 @@ To get a local copy up and running follow these simple example steps.
 ```bash 
 https://github.com/muskan2532150/LeaderBoard.git
 ```
+- Install Webpack 
+```bash
+npm i
+```
+- Run Webpack
+```bash
+npm start
+```
 
 ## Author
 
