@@ -14,17 +14,18 @@
         <div class="part-one">
             <div class="head">
                 <h3>Recent scores</h3>
-                <button type="button">Refresh</button>
+                <button type="button" class="Refresh">Refresh</button>
             </div>
             <div class="box">
+                <ul class='part-one-ul'></ul>
             </div>
         </div>
         <div class="part-two">
             <h3>Add your scores</h3>
-            <form action="#" class="form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="text" placeholder="Your Score" required>
-                <button type="button" value="Submit">Submit</button>
+            <form  class="form">
+                <input type="text" placeholder="Your Name" id="name" required>
+                <input type="text" placeholder="Your Score" id="score" required>
+                <button type="submit" id="Submit-btn">Submit</button>
             </form>
         </div>
     </main>

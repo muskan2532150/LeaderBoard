@@ -33,6 +33,7 @@ button {
 h1 {
   padding-top: 8%;
   font-size: 50px;
+ text-align: center;
   padding-left: 8%;
 }
 
@@ -69,6 +70,7 @@ h1 {
 
 .part-one-ul li {
   padding: 12px;
+  font-size: 20px;
 }
 
 .part-one-ul li:nth-child(odd) {
