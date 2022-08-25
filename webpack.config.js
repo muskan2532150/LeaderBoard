@@ -25,7 +25,7 @@ module.exports = {
       },
     ],
   },
- optimization: {
+  optimization: {
     runtimeChunk: 'single',
   },
 };
