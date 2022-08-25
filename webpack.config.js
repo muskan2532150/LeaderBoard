@@ -25,11 +25,7 @@ module.exports = {
       },
     ],
   },
-  // plugins: [new HtmlWebpackPlugin({
-  //   template: './src/index.html',
-  // }),
-  // ],
-  optimization: {
+ optimization: {
     runtimeChunk: 'single',
   },
 };

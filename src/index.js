@@ -1,40 +1,46 @@
 import './style.css';
-import {Form,Name,refresh,Score} from '../module/Import.js';
-import Api from '../module/Apifunction';
-import Scoreboard from '../module/Scoreboard';
+import {
+  Form, Name, refresh, Score,
+} from '../module/Import.js';
+import Api from '../module/Apifunction.js';
 
 let id;
-let url=`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/:${id}/scores`;
+const url = `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/:${id}/scores`;
 
-const setId = ()=> {
+const setId = () => {
   fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games ', {
-      method: 'POST',
-      body: JSON.stringify({
-          "name": "Game  Name"
-      }),
-      headers: {
-          'Content-type': 'application/json; charset=UTF-8',
-      },
+    method: 'POST',
+    body: JSON.stringify({
+      name: 'Game  Name',
+    }),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
   })
-      .then((response) => response.json())
-      .then((json) => {
-          id = json.result.split(" ");
-         id=id[3];
-      });
-}
+    .then((response) => response.json())
+    .then((json) => {
+      id = json.result.split(' ');
+      [,,, id] = id;
+    });
+};
 
 window.addEventListener('DOMContentLoaded', () => {
   setId();
-  Scoreboard.addLi(url);
+  Api.getData(url);
 });
 
-Form.addEventListener('submit',(e)=>{
+const clearForm = () => {
+  Name.value = '';
+  Score.value = '';
+};
+
+Form.addEventListener('submit', (e) => {
   e.preventDefault();
-  Api.setData(url,Name,Score);
-  Scoreboard.clearForm();
+  Api.setData(url, Name, Score);
+  clearForm();
 });
-  
-refresh.addEventListener('click',()=>{
-  Scoreboard.addLi(url);
-  // Api.deleteApi(url);    
-})
+
+refresh.addEventListener('click', () => {
+  Api.getData(url);
+  // Api.deleteApi(url);
+});
