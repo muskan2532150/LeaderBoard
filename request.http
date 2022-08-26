@@ -1,0 +1,20 @@
+POST https://us-central1-js-capstone-backend.cloudfunctions.net/api/games  
+content-type: application/json
+
+{
+      "name": "Game  Name"
+}
+
+###
+POST https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/Pp1S9HLMkbonTZ7Ipojt/scores  
+content-type: application/json
+
+{
+     "user": "Rajini",
+      "score": 84
+}
+
+###
+GET https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/Pp1S9HLMkbonTZ7Ipojt/scores 
+
+#  { "result": "Game with ID: Pp1S9HLMkbonTZ7Ipojt added."}

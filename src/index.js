@@ -4,28 +4,9 @@ import {
 } from '../module/Import.js';
 import Api from '../module/Apifunction.js';
 
-let id;
-const url = `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/:${id}/scores`;
-
-const setId = () => {
-  fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games ', {
-    method: 'POST',
-    body: JSON.stringify({
-      name: 'Game  Name',
-    }),
-    headers: {
-      'Content-type': 'application/json; charset=UTF-8',
-    },
-  })
-    .then((response) => response.json())
-    .then((json) => {
-      id = json.result.split(' ');
-      [,,, id] = id;
-    });
-};
+const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/Pp1S9HLMkbonTZ7Ipojt/scores';
 
 window.addEventListener('DOMContentLoaded', () => {
-  setId();
   Api.getData(url);
 });
 
@@ -40,7 +21,8 @@ Form.addEventListener('submit', (e) => {
   clearForm();
 });
 
-refresh.addEventListener('click', () => {
+refresh.addEventListener('click', (e) => {
+  const liList = e.target.parentNode.nextElementSibling.firstElementChild;
+  liList.remove();
   Api.getData(url);
-  // Api.deleteApi(url);
 });
