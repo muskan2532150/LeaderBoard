@@ -2,7 +2,7 @@ import { Box } from './Import.js';
 
 class Api {
   static setData = (url, Name, Score) => {
-    fetch(url, {
+   await fetch(url, {
       method: 'POST',
       body: JSON.stringify({
         user: `${Name.value}`,
