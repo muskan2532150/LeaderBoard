@@ -10,15 +10,10 @@ window.addEventListener('DOMContentLoaded', () => {
   Api.getData(url);
 });
 
-const clearForm = () => {
-  Name.value = '';
-  Score.value = '';
-};
-
 Form.addEventListener('submit', (e) => {
   e.preventDefault();
   Api.setData(url, Name, Score);
-  clearForm();
+  Form.reset();
 });
 
 refresh.addEventListener('click', (e) => {

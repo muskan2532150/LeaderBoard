@@ -1,7 +1,7 @@
 import { Box } from './Import.js';
 
 class Api {
-  static setData = (url, Name, Score) => {
+  static setData =async (url, Name, Score) => {
    await fetch(url, {
       method: 'POST',
       body: JSON.stringify({
@@ -23,7 +23,7 @@ class Api {
       .then((data) => data.result.forEach((el) => {
         const li = document.createElement('li');
         li.setAttribute('class', 'ul-li');
-        const liText = document.createTextNode(`${el.user}:${el.score}`);
+        const liText = document.createTextNode(`${el.user}:  ${el.score}`);
         li.appendChild(liText);
         ul.appendChild(li);
       }));
