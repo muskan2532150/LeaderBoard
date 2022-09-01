@@ -1,0 +1,49 @@
+@media screen and (max-width:768px) {
+   .main {
+    flex-direction: column;
+    flex-direction: column;
+    gap: 5%;
+    height: 100vh;
+    justify-content: flex-start;
+   }
+
+   .part-one,
+.part-two {
+    width: 100%;
+}
+
+.part-one-ul {
+width: 100%;
+height: 35vh;
+}
+
+button {
+    border-radius: 7px;
+}
+
+h1 {
+    font-size: 7vw;
+    padding: 15% 0;
+}
+
+.head h3, .part-two h3 {
+    font-size: 3.8vw;
+}
+
+.head button {
+    font-size: 3.4vw;
+}
+
+.ul-li {
+    font-size: 3vw;
+}
+
+input::placeholder {
+    font-size: 3vw;
+}
+
+.part-two button {
+    padding: 3%;
+    font-size: 3vw;
+}
+}

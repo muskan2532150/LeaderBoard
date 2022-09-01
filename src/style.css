@@ -1,26 +1,53 @@
-@import url('https://fonts.googleapis.com/css2?family=DynaPuff&family=Poppins:wght@600;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'DynaPuff', cursive;
+  font-family: 'Poppins', sans-serif;;
 }
 
 body {
   margin: 2.5vw 7vw 0 7vw;
+  background-image: url('../img/Image.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #fff;
+  height: 94vh;
 }
 
-button {
-  background-color: transparent;
-  box-shadow: 0px 10px 15px -3px #000;
+i {
+  color: #e9c46a;
+}
+
+button > i {
+  color: #fff;
 }
 
 input,
 button {
-  font-size: 2.5vw;
-  border: 2px solid black;
+  font-size: 2.0vw;
+  border: 0;
   padding: 11px;
+  color: #fff;
+  font-weight: 400;
+}
+
+button {
+  background-color: #fff;
+  box-shadow: 0px 13px 15px -3px rgba(0,0,0,0.9);
+  color: #1b5849;
+  border-radius: 16px;
+}
+
+input {
+  padding-bottom: 0;
+  background-color: transparent;
+}
+
+hr {
+  width: 50%;
+  align-self: end;
+  margin-bottom: 25px;
 }
 
 .main {
@@ -31,15 +58,15 @@ button {
 }
 
 h1 {
-  font-size: 6vw;
-  text-shadow: -18px 5px rgba(0,0,0,0.1);
+  font-size: 4vw;
+  text-align: center;
 }
 
 .part-one,
 .part-two {
   width: 50%;
-  box-shadow: 0px 10px 15px -3px #000;
     padding: 2%;
+    box-shadow: 0px 19px 15px -3px rgba(0,0,0,0.8);
 }
 
 .head {
@@ -52,10 +79,14 @@ h1 {
 .head h3,
 .part-two h3 {
   font-size: 2.8vw;
+  font-weight: 400;
 }
 
 .head button {
   padding: 1%;
+  font-size: 2vw;
+  background-color: transparent;
+  color: #fff;
 }
 
 .part-one-ul {
@@ -63,20 +94,32 @@ h1 {
   flex-direction: column;
   list-style: none;
   font-size: 25px;
-  font-weight: 600;
+  font-weight: 400;
   border: 5px solid transparent;
   width: 33vw;
-  overflow: scroll;
+  overflow-y: scroll;
+  height: 50vh;
 }
 
 .part-one-ul li {
   padding: 12px;
-  font-size: 3vw;
+  font-size: 2vw;
+  margin-right: 7%;
+  border-bottom: 2px solid;
 }
 
-.part-one-ul li:nth-child(odd) {
-  background-color: #d3d3d3;
-  margin-right: 7%;
+.ul-li > div {
+  display: flex;
+  align-items: center;
+}
+
+.ul-li > div > div{
+  display: flex;
+  padding-left: 30px;
+}
+
+.ul-li > div > div > p {
+  padding-right: 15px;
 }
 
 .part-two h3 {
@@ -86,15 +129,30 @@ h1 {
 .form {
   display: flex;
   flex-direction: column;
-  gap: 25px;
 }
 
 input::placeholder {
   font-size: 2.5vw;
-  color: #000;
-  font-weight: 600;
+  color: #fff;
+  font-weight: 400;
 }
 
 .part-two button {
   align-self: end;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

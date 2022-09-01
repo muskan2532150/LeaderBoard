@@ -1,4 +1,5 @@
 import './style.css';
+import './media.css';
 import {
   Form, Name, refresh, Score,
 } from '../module/Import.js';
