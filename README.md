@@ -18,6 +18,9 @@ The leaderboard website displays scores submitted by different players. It also 
 - Node
 - Webpack
 
+###### JS Library
+- Anime
+
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
