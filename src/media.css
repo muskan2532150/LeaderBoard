@@ -1,9 +1,13 @@
 @media screen and (max-width:768px) {
-   .main {
+   body {
+    height: 100vh;
+   }
+
+    .main {
     flex-direction: column;
     flex-direction: column;
     gap: 5%;
-    height: 100vh;
+    height: 90vh;
     justify-content: flex-start;
    }
 

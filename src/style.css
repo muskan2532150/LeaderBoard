@@ -8,10 +8,10 @@
 
 body {
   margin: 2.5vw 7vw 0 7vw;
-  background-image: url('../img/Image.png');
+  background-image: url('../img/Subtle-Clouds-Texture-Pattern.webp');
   background-repeat: no-repeat;
   background-position: center;
-  color: #fff;
+  color: #000;
   height: 94vh;
 }
 
@@ -20,7 +20,7 @@ i {
 }
 
 button > i {
-  color: #fff;
+  color: #000;
 }
 
 input,
@@ -28,12 +28,12 @@ button {
   font-size: 2.0vw;
   border: 0;
   padding: 11px;
-  color: #fff;
+  color: #000;
   font-weight: 400;
 }
 
 button {
-  background-color: #fff;
+  background-color: #ffffff9e;
   box-shadow: 0px 13px 15px -3px rgba(0,0,0,0.9);
   color: #1b5849;
   border-radius: 16px;
@@ -86,7 +86,7 @@ h1 {
   padding: 1%;
   font-size: 2vw;
   background-color: transparent;
-  color: #fff;
+  
 }
 
 .part-one-ul {
@@ -133,7 +133,7 @@ h1 {
 
 input::placeholder {
   font-size: 2.5vw;
-  color: #fff;
+  color: #000;
   font-weight: 400;
 }
 

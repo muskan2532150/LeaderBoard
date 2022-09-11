@@ -2,7 +2,7 @@ import { Box } from './Import.js';
 
 class Api {
   static setData =async (url, Name, Score) => {
-   await fetch(url, {
+    await fetch(url, {
       method: 'POST',
       body: JSON.stringify({
         user: `${Name.value}`,
@@ -20,14 +20,18 @@ class Api {
     ul.setAttribute('class', 'part-one-ul');
     await fetch(url)
       .then((response) => response.json())
-      .then((data) => data.result.forEach((el) => {
-       createLi(el,ul);
-      }));
+      .then((data) =>{
+        console.log(data.result);
+        const values = Object.values(data.result);
+         console.log(values);
+         data.result.forEach((el) => {
+        createLi(el, ul);
+      })});
     Box.appendChild(ul);
   }
 }
 
-const createLi = (el,ul) => {
+const createLi = (el, ul) => {
   const li = document.createElement('li');
   li.setAttribute('class', 'ul-li');
   const i = document.createElement('i');
@@ -40,14 +44,13 @@ const createLi = (el,ul) => {
   const p2Text = document.createTextNode(`${el.score}`);
   p1.appendChild(p1Text);
   p2.appendChild(p2Text);
-  
+
   div.appendChild(i);
   div1.appendChild(p1);
   div1.appendChild(p2);
   div.appendChild(div1);
   li.appendChild(div);
   ul.appendChild(li);
-}
-
+};
 
 export default Api;
