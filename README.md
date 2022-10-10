@@ -9,10 +9,13 @@ The leaderboard website displays scores submitted by different players. It also 
 - HTML
 - CSS
 - JAVASCRIPT
+
 ###### Tools  
 - Github
+
 ###### Code Editor
 - VS code
+
 ###### Packages 
 - NPM
 - Node
@@ -51,8 +54,8 @@ npm start
 
 ## Author
 
-- GitHub: @muskan2532150
-- Twitter: @muskan2532150
+- GitHub: [@github](https://github.com/muskan2532150)
+- Twitter: [@twitter](muskan2532150)
 - Linkedin:[Username](https://www.linkedin.com/in/muskan-gupta-869165225/)
 
 ## 🤝 Contributing
