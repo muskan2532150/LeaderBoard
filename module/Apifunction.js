@@ -1,7 +1,7 @@
 import { Box } from './Import.js';
 
 class Api {
-  static setData =async (url, Name, Score) => {
+  static setData = async (url, Name, Score) => {
     await fetch(url, {
       method: 'POST',
       body: JSON.stringify({
@@ -20,13 +20,12 @@ class Api {
     ul.setAttribute('class', 'part-one-ul');
     await fetch(url)
       .then((response) => response.json())
-      .then((data) =>{
-        console.log(data.result);
-        const values = Object.values(data.result);
-         console.log(values);
-         data.result.forEach((el) => {
-        createLi(el, ul);
-      })});
+      .then((data) => {
+        data.result.sort((a, b) => b.score - a.score);
+        data.result.forEach((el) => {
+          createLi(el, ul);
+        })
+      });
     Box.appendChild(ul);
   }
 }
